@@ -1,0 +1,134 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.section-wrapper {
+  width: 90%;
+  margin: auto;
+  overflow: hidden; }
+  .section-wrapper .row {
+    padding: 0;
+    margin: 0; }
+    .section-wrapper .row .logo-wrapper {
+      padding: 0; }
+      .section-wrapper .row .logo-wrapper img {
+        height: 80px;
+        margin-top: 10px; }
+    .section-wrapper .row nav {
+      height: 100px;
+      line-height: 100px;
+      padding: 0;
+      margin: 0;
+      margin-left: auto; }
+      .section-wrapper .row nav ul {
+        display: flex;
+        flex-direction: row-reverse; }
+        .section-wrapper .row nav ul li a {
+          font-family: 'Russo One', sans-serif;
+          color: #353b48;
+          padding-left: 25px;
+          font-size: 20px; }
+
+.banner-top-wrapper {
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/banner-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column; }
+  .banner-top-wrapper .banner-top-inner {
+    height: 70%; }
+    .banner-top-wrapper .banner-top-inner .banner-text-container h1 {
+      color: white;
+      font-family: 'Russo One', sans-serif;
+      font-size: 4rem;
+      line-height: 1.3; }
+    .banner-top-wrapper .banner-top-inner .banner-button-container button {
+      height: 50px;
+      width: 300px;
+      outline-style: none;
+      margin: 25px 0;
+      border-style: none;
+      font-family: 'Russo One', sans-serif;
+      background-color: #D35400;
+      color: white; }
+
+.summary-container {
+  padding: 150px 0; }
+  .summary-container .fluid-container {
+    padding: 0;
+    margin: 0; }
+    .summary-container .fluid-container .row {
+      padding: 0;
+      margin: 0; }
+      .summary-container .fluid-container .row .width-setter {
+        width: 90%;
+        margin: auto; }
+        .summary-container .fluid-container .row .width-setter .summary-container-inner {
+          display: flex; }
+          .summary-container .fluid-container .row .width-setter .summary-container-inner .section-title {
+            display: flex;
+            justify-content: space-around;
+            width: 50%; }
+            .summary-container .fluid-container .row .width-setter .summary-container-inner .section-title h2 {
+              text-align: center;
+              color: #353b48;
+              font-family: 'Russo One', sans-serif;
+              font-size: 4rem;
+              width: 60%;
+              margin: 0 20%;
+              text-align: right; }
+          .summary-container .fluid-container .row .width-setter .summary-container-inner .section-description {
+            width: 50%;
+            display: flex;
+            justify-content: space-around; }
+            .summary-container .fluid-container .row .width-setter .summary-container-inner .section-description p {
+              text-align: center;
+              font-family: Sen;
+              font-size: 40px;
+              width: 60%;
+              margin: 0 20%;
+              text-align: center;
+              color: #353b48;
+              text-align: left; }

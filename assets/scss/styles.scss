@@ -1,0 +1,125 @@
+@import 'reset.scss';
+
+
+
+.section-wrapper{
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  .row{
+    padding: 0;
+    margin: 0;
+  .logo-wrapper{
+    padding: 0;
+    img{
+      height: 80px;
+      margin-top: 10px;
+    }
+  }
+  nav{
+    height: 100px;
+    line-height: 100px;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    ul{
+      display: flex;
+      flex-direction: row-reverse;
+      li{
+        a{
+          font-family: 'Russo One', sans-serif;
+          color: #353b48;
+          padding-left: 25px;
+          font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.banner-top-wrapper{
+  width: 100%;
+  height: 400px;
+  background-image: url('../images/banner-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+
+  .banner-top-inner{
+    height: 70%;
+    .banner-text-container{
+      h1{
+        color: white;
+        font-family: 'Russo One', sans-serif;
+        font-size: 4rem;
+        line-height: 1.3;
+      }
+    }
+    .banner-button-container{
+      button{
+        height: 50px;
+        width: 300px;
+        outline-style: none;
+        margin: 25px 0;
+        border-style: none;
+        font-family: 'Russo One', sans-serif;
+        background-color: #D35400;
+        color: white;
+
+      }
+    }
+  }
+}
+
+
+.summary-container{
+  padding: 150px 0;
+  .fluid-container{
+    padding: 0;
+    margin: 0;
+    .row{
+      padding: 0;
+      margin: 0;
+      .width-setter{
+        width: 90%;
+        margin: auto;
+        .summary-container-inner{
+          display: flex;
+          .section-title{
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            h2{
+              text-align: center;
+              color: #353b48;
+              font-family: 'Russo One', sans-serif;
+              font-size: 4rem;
+              width: 60%;
+              margin: 0 20%;
+              text-align: right;
+            }
+          }
+          .section-description{
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+            p{
+                text-align: center;
+                font-family: Sen;
+                font-size: 40px;
+                width: 60%;
+                margin: 0 20%;
+                text-align: center;
+                color: #353b48;
+                text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
