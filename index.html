@@ -2,53 +2,91 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Wood Worx</title>
+    <title>WOOD WORX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Sen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../dist/styles/styles.css">
   </head>
   <body>
 
-    <div class="section-wrapper fluid-container">
-      <div class="row ">
-        <div class="logo-wrapper col-lg-4">
-          <img src="https://www.wilsonfamilychiropracticcenter.net/wp-content/uploads/2018/12/placeholder-logo-2.png" alt="">
+    <header>
+      <div class="fluid-container">
+          <div class="row">
+            <div class="inner-content-wrapper">
+              <div class="logo-container no-pad  verticle-align col-6">
+                <img class="header-logo" src="./dist/images/logo.png" alt="">
+              </div>
+              <div class="navigation-container no-pad verticle-align  col-lg-6">
+                <!-- Burger-Icon -->
+                <div class="b-container">
+                  <div class="b-menu">
+                    <div class="b-bun b-bun--top"></div>
+                    <div class="b-bun b-bun--mid"></div>
+                    <div class="b-bun b-bun--bottom"></div>
+                  </div>
+                </div>
+                <nav>
+                  <ul>
+                    <li><a href="#services-wrapper">OUR SERVICES</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">GET IN TOUCH</a></li>
+                  </ul>
+                </nav>
+                <!-- Navigation -->
+                <div class="b-nav">
+                  <li><a class="b-link" href="" target="_blank">OUR SERVICES</a></li>
+                  <li><a class="b-link" href="" target="_blank">ABOUT US</a></li>
+                  <li><a class="b-link" href="" target="_blank">GET IN TOUCH</a></li>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </header>
+
+    <div class="hero-container">
+      <div class="pt-5 pb-5 inner-content-wrapper">
+        <div class="mb-5 hero-banner-text">
+          <h1>WOOD WORX <br> CARPENTRY & KITCHENS </h1>
         </div>
-        <nav class="col-lg-8">
-          <ul>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">OUR SERVICES</a></li>
-            <li><a href="#">GET IN TOUCH</a></li>
-          </ul>
-        </nav>
+        <div class="button-wrapper">
+          <button type="button" name="button">GET IN TOUCH</button>
+        </div>
       </div>
     </div>
 
-
-    <div class="banner-top-wrapper">
-      <div class="banner-top-inner section-wrapper">
-        <div class="banner-text-container">
-          <h1>
-            WOOD WORX <br> Carpentry & Kitchens
-          </h1>
-        </div>
-        <div class="banner-button-container">
-          <button type="button" name="button">CONTACT US</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="summary-container">
+    <div class="p-5 verticle-align short-description-container">
       <div class="fluid-container">
         <div class="row">
-          <div class="width-setter">
-            <div class="summary-container-inner">
-              <div class="section-title">
-                <h2>WOOD WORX in a nutshell</h2>
-              </div>
-              <div class="section-description">
-                <p>WOOD WORX are BIKBBI registered kitchen fitters and general carpenters opperating in the East of England </p>
-              </div>
+          <div class="pt-5 col-md-12 col-lg-6 verticle-align col-sm-12 short-description-title text-center">
+            <h2>WOOD WORX in a nutshell </h2>
+          </div>
+          <div class="pt-5  col-lg-6 col-sm-12 short-description-text text-center">
+            <p>WOOD WORX are BIKBBI registered kitchen fitters and general carpenters opperating in the East of England </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="#services-wrapper" class="services-wrapper mt-5">
+      <div class="services-title pb-5 text-center">
+        <h2>OUR SERVICES</h2>
+      </div>
+      <div class="services mt-5">
+        <div class="container-fluid">
+          <div class="row">
+            <div id="service-1" class="service col-lg-5 col-sm-12">
+              <h3>FLOORING</h3>
+            </div>
+            <div id="service-2" class="service col-lg-5 col-sm-12">
+              <h3>KITCHENS</h3>
+            </div>
+            <div id="service-3" class="service col-lg-5 col-sm-12">
+              <h3>LOFT CONVERSIONS</h3>
+            </div>
+            <div id="service-4" class="service col-lg-5 col-sm-12">
+              <h3>OUTDOOR OFFICES</h3>
             </div>
           </div>
         </div>
@@ -56,6 +94,6 @@
     </div>
 
 
-
   </body>
+  <script src="../dist/scripts/scripts.js" charset="utf-8"></script>
 </html>

@@ -41,94 +41,398 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.section-wrapper {
-  width: 90%;
-  margin: auto;
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-250px, 0, 0);
+    visibility: visible; }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes slideOutLeft {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  100% {
+    transform: translate3d(-250px, 0, 0);
+    visibility: hidden; } }
+
+* {
+  box-sizing: border-box; }
+
+body:after {
+  background: white;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.4s ease;
+  width: 100%; }
+
+body.open {
   overflow: hidden; }
-  .section-wrapper .row {
+
+body.open:after {
+  opacity: 1;
+  visibility: visible; }
+
+.b-nav {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 11;
+  background-color: #2C3E50; }
+  .b-nav:not(.open) {
+    visibility: hidden; }
+  .b-nav li {
+    color: #444444;
+    list-style-type: none;
+    padding: 10px;
+    text-align: left;
+    transform: translateX(-250px); }
+  .b-nav li:not(.open) {
+    animation-duration: 0.4s;
+    animation-fill-mode: both;
+    animation-name: slideOutLeft; }
+  .b-nav li:first-child {
+    padding-top: 120px; }
+  .b-nav.open {
+    visibility: visible;
+    max-width: 100vw !important;
+    left: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed; }
+    .b-nav.open li {
+      animation-duration: 0.4s;
+      animation-fill-mode: both;
+      animation-name: slideInLeft; }
+
+.b-link {
+  background: transparent;
+  border-left: rgba(68, 68, 68, 0) solid 2px;
+  color: white;
+  font-family: 'Russo One', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin-left: 30px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  width: auto; }
+  .b-link:hover, .b-link--active {
+    border-left: #444444 solid 2px;
+    padding-left: 30px; }
+
+.b-menu {
+  background: white;
+  border: white solid 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  padding-left: 15.5px;
+  padding-top: 17.5px;
+  position: relative;
+  transition: all 0.4s ease;
+  user-select: none;
+  width: 60px;
+  z-index: 12; }
+  .b-menu:hover {
+    border: #444444 solid 2px; }
+
+.b-bun {
+  background: #444444;
+  position: relative;
+  transition: all 0.4s ease; }
+  .b-bun--top {
+    height: 2px;
+    top: 0;
+    width: 25px; }
+  .b-bun--mid {
+    height: 2px;
+    top: 8px;
+    width: 25px; }
+  .b-bun--bottom {
+    height: 2px;
+    top: 16px;
+    width: 25px; }
+
+.b-brand {
+  color: white;
+  font-family: Helvetica-Neue, Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin-left: 30px;
+  position: relative;
+  text-decoration: none;
+  top: -21.42857px;
+  transition: all 0.4s ease;
+  z-index: 13; }
+
+.b-container {
+  height: 60px; }
+  .b-container:hover:not(.open) .bun-top,
+  .b-container:hover:not(.open) .bun-mid,
+  .b-container:hover:not(.open) .bun-bottom {
+    background: white; }
+  .b-container.open {
+    position: static; }
+    .b-container.open .b-main {
+      border: #444444 solid 2px; }
+    .b-container.open .b-bun--top {
+      background: #444444;
+      top: 9px;
+      transform: rotate(45deg); }
+    .b-container.open .b-bun--mid {
+      opacity: 0; }
+    .b-container.open .b-bun--bottom {
+      background: #444444;
+      top: 5px;
+      transform: rotate(-45deg); }
+    .b-container.open .b-brand {
+      color: #444444; }
+
+/*VARIABLES*/
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw; }
+
+.fluid-container {
+  padding: 0;
+  margin: 0; }
+  .fluid-container .row {
     padding: 0;
     margin: 0; }
-    .section-wrapper .row .logo-wrapper {
-      padding: 0; }
-      .section-wrapper .row .logo-wrapper img {
-        height: 80px;
-        margin-top: 10px; }
-    .section-wrapper .row nav {
-      height: 100px;
-      line-height: 100px;
-      padding: 0;
-      margin: 0;
-      margin-left: auto; }
-      .section-wrapper .row nav ul {
-        display: flex;
-        flex-direction: row-reverse; }
-        .section-wrapper .row nav ul li a {
-          font-family: 'Russo One', sans-serif;
-          color: #353b48;
-          padding-left: 25px;
-          font-size: 20px; }
 
-.banner-top-wrapper {
-  width: 100%;
-  height: 400px;
-  background-image: url("../images/banner-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.inner-content-wrapper {
+  width: 90%;
+  margin: 0 auto; }
+
+.verticle-align {
   display: flex;
+  justify-content: center;
   flex-direction: column; }
-  .banner-top-wrapper .banner-top-inner {
-    height: 70%; }
-    .banner-top-wrapper .banner-top-inner .banner-text-container h1 {
-      color: white;
-      font-family: 'Russo One', sans-serif;
-      font-size: 4rem;
-      line-height: 1.3; }
-    .banner-top-wrapper .banner-top-inner .banner-button-container button {
-      height: 50px;
-      width: 300px;
-      outline-style: none;
-      margin: 25px 0;
-      border-style: none;
-      font-family: 'Russo One', sans-serif;
-      background-color: #D35400;
-      color: white; }
 
-.summary-container {
-  padding: 150px 0; }
-  .summary-container .fluid-container {
-    padding: 0;
-    margin: 0; }
-    .summary-container .fluid-container .row {
+.no-pad {
+  padding: 0; }
+
+header {
+  overflow: hidden; }
+  header .fluid-container .row .inner-content-wrapper {
+    display: flex;
+    height: 100px; }
+    header .fluid-container .row .inner-content-wrapper .logo-container img {
+      width: 50%; }
+    header .fluid-container .row .inner-content-wrapper .navigation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       padding: 0;
       margin: 0; }
-      .summary-container .fluid-container .row .width-setter {
-        width: 90%;
-        margin: auto; }
-        .summary-container .fluid-container .row .width-setter .summary-container-inner {
-          display: flex; }
-          .summary-container .fluid-container .row .width-setter .summary-container-inner .section-title {
+      header .fluid-container .row .inner-content-wrapper .navigation-container .b-container {
+        padding: 0;
+        width: 100%;
+        text-align: right; }
+      header .fluid-container .row .inner-content-wrapper .navigation-container nav {
+        height: 40%;
+        display: none; }
+        header .fluid-container .row .inner-content-wrapper .navigation-container nav ul {
+          z-index: 2;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; }
+          header .fluid-container .row .inner-content-wrapper .navigation-container nav ul li {
+            text-align: center; }
+            header .fluid-container .row .inner-content-wrapper .navigation-container nav ul li a {
+              margin-left: 25px;
+              color: white;
+              z-index: 1;
+              font-family: "Russo One", sans-serif;
+              font-size: 25px; }
+
+.hero-container {
+  background-image: url("../images/banner-background.jpg");
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center; }
+  .hero-container .inner-content-wrapper {
+    height: 100%; }
+    .hero-container .inner-content-wrapper .hero-banner-text h1 {
+      font-family: "Russo One", sans-serif;
+      font-size: 8vw;
+      color: white; }
+    .hero-container .inner-content-wrapper .button-wrapper button {
+      font-family: "Russo One", sans-serif;
+      border-style: none;
+      color: white;
+      height: 50px;
+      width: 300px;
+      background-color: #D35400; }
+
+.short-description-container {
+  padding: 0; }
+  .short-description-container .fluid-container {
+    padding: 0;
+    margin: 0; }
+    .short-description-container .fluid-container .row .short-description-title h2 {
+      font-family: "Russo One", sans-serif;
+      font-size: 50px;
+      width: 100%;
+      margin: auto; }
+    .short-description-container .fluid-container .row .short-description-text p {
+      font-family: "Sen", sans-serif;
+      font-size: 30px;
+      width: 100%;
+      margin: auto; }
+
+.services-wrapper {
+  padding: 0;
+  margin: 0;
+  max-width: 100% !important;
+  overflow: hidden !important; }
+  .services-wrapper .services-title h2 {
+    font-family: "Russo One", sans-serif;
+    font-size: 50px;
+    color: #D35400; }
+  .services-wrapper .services .container-fluid .row {
+    justify-content: center; }
+    .services-wrapper .services .container-fluid .row .service {
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .services-wrapper .services .container-fluid .row .service h3 {
+        font-family: "Russo One", sans-serif;
+        color: white;
+        font-size: 7vw;
+        text-align: center; }
+    .services-wrapper .services .container-fluid .row #service-1 {
+      background-image: url("../images/flooring.jpg"); }
+    .services-wrapper .services .container-fluid .row #service-2 {
+      background-image: url("../images/kitchen.jpg"); }
+    .services-wrapper .services .container-fluid .row #service-3 {
+      background-image: url("../images/loft.jpg"); }
+    .services-wrapper .services .container-fluid .row #service-4 {
+      background-image: url("../images/office.jpg"); }
+
+@media (min-width: 992px) {
+  .b-container {
+    display: none; }
+  .inner-content-wrapper {
+    width: 90%;
+    margin: 0 auto; }
+  /* Header section*/
+  header .fluid-container .row .inner-content-wrapper {
+    display: flex;
+    height: 100px; }
+    header .fluid-container .row .inner-content-wrapper .logo-container img {
+      width: 400px; }
+    header .fluid-container .row .inner-content-wrapper .navigation-container {
+      position: relative;
+      height: auto;
+      background-color: white; }
+      header .fluid-container .row .inner-content-wrapper .navigation-container nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        header .fluid-container .row .inner-content-wrapper .navigation-container nav ul {
+          display: flex;
+          flex-direction: row;
+          padding: 0;
+          margin: 0;
+          justify-content: flex-end; }
+          header .fluid-container .row .inner-content-wrapper .navigation-container nav ul li {
             display: flex;
-            justify-content: space-around;
-            width: 50%; }
-            .summary-container .fluid-container .row .width-setter .summary-container-inner .section-title h2 {
-              text-align: center;
-              color: #353b48;
-              font-family: 'Russo One', sans-serif;
-              font-size: 4rem;
-              width: 60%;
-              margin: 0 20%;
-              text-align: right; }
-          .summary-container .fluid-container .row .width-setter .summary-container-inner .section-description {
-            width: 50%;
-            display: flex;
+            flex-direction: column;
             justify-content: space-around; }
-            .summary-container .fluid-container .row .width-setter .summary-container-inner .section-description p {
-              text-align: center;
-              font-family: Sen;
-              font-size: 40px;
-              width: 60%;
-              margin: 0 20%;
-              text-align: center;
-              color: #353b48;
-              text-align: left; }
+            header .fluid-container .row .inner-content-wrapper .navigation-container nav ul li a {
+              margin-left: 25px;
+              color: #2C3E50;
+              font-family: "Russo One", sans-serif;
+              font-size: 1.5vw; }
+  /*HERO SECTION*/
+  .hero-container {
+    background-image: url("../images/banner-background.jpg");
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center; }
+    .hero-container .inner-content-wrapper {
+      height: 100%; }
+      .hero-container .inner-content-wrapper .hero-banner-text h1 {
+        font-family: "Russo One", sans-serif;
+        font-size: 4vw;
+        color: white; }
+      .hero-container .inner-content-wrapper .button-wrapper button {
+        font-family: "Russo One", sans-serif;
+        border-style: none;
+        color: white;
+        height: 50px;
+        width: 300px;
+        background-color: #D35400; }
+  /*50-50 SECTION*/
+  .short-description-container {
+    padding: 0; }
+    .short-description-container .fluid-container {
+      padding: 0;
+      margin: 0; }
+      .short-description-container .fluid-container .row .short-description-title h2 {
+        font-family: "Russo One", sans-serif;
+        font-size: 70px;
+        width: 60%;
+        margin: auto; }
+      .short-description-container .fluid-container .row .short-description-text p {
+        font-family: "Sen", sans-serif;
+        font-size: 40px;
+        width: 60%;
+        margin: auto; }
+  /*SERVICES SECTION*/
+  .services-wrapper {
+    padding: 0;
+    margin: 0;
+    max-width: 100% !important;
+    overflow: hidden !important; }
+    .services-wrapper .services-title h2 {
+      font-family: "Russo One", sans-serif;
+      font-size: 50px;
+      color: #D35400; }
+    .services-wrapper .services .container-fluid .row {
+      justify-content: center; }
+      .services-wrapper .services .container-fluid .row .service {
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .services-wrapper .services .container-fluid .row .service h3 {
+          font-family: "Russo One", sans-serif;
+          color: white;
+          font-size: 3vw;
+          text-align: center; }
+      .services-wrapper .services .container-fluid .row #service-1 {
+        margin: 0 20px 20px 0;
+        background-image: url("../images/flooring.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-2 {
+        margin: 0 0px 20px 20px;
+        background-image: url("../images/kitchen.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-3 {
+        margin: 20px 20px 0 0;
+        background-image: url("../images/loft.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-4 {
+        margin: 20px 0 0 20px;
+        background-image: url("../images/office.jpg"); } }
