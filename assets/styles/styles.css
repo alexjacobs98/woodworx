@@ -227,7 +227,7 @@ header {
     display: flex;
     height: 100px; }
     header .fluid-container .row .inner-content-wrapper .logo-container img {
-      width: 50%; }
+      width: 220px; }
     header .fluid-container .row .inner-content-wrapper .navigation-container {
       display: flex;
       flex-direction: column;
