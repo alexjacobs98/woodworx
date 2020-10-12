@@ -338,7 +338,8 @@ header {
     display: flex;
     height: 100px; }
     header .fluid-container .row .inner-content-wrapper .logo-container img {
-      width: 400px; }
+      width: 220px;
+      background-color: black; }
     header .fluid-container .row .inner-content-wrapper .navigation-container {
       position: relative;
       height: auto;
