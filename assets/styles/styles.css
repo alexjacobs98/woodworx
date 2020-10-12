@@ -128,9 +128,6 @@ body.open:after {
     padding-left: 30px; }
 
 .b-menu {
-  background: white;
-  border: white solid 2px;
-  border-radius: 50%;
   cursor: pointer;
   display: inline-block;
   height: 60px;
@@ -141,12 +138,11 @@ body.open:after {
   user-select: none;
   width: 60px;
   z-index: 12; }
-  .b-menu:hover {
-    border: #444444 solid 2px; }
 
 .b-bun {
-  background: #444444;
+  background: white;
   position: relative;
+  color: white;
   transition: all 0.4s ease; }
   .b-bun--top {
     height: 2px;
@@ -181,16 +177,14 @@ body.open:after {
     background: white; }
   .b-container.open {
     position: static; }
-    .b-container.open .b-main {
-      border: #444444 solid 2px; }
     .b-container.open .b-bun--top {
-      background: #444444;
+      background: white;
       top: 9px;
       transform: rotate(45deg); }
     .b-container.open .b-bun--mid {
       opacity: 0; }
     .b-container.open .b-bun--bottom {
-      background: #444444;
+      background: white;
       top: 5px;
       transform: rotate(-45deg); }
     .b-container.open .b-brand {
@@ -222,12 +216,13 @@ html {
   padding: 0; }
 
 header {
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #2C3E50; }
   header .fluid-container .row .inner-content-wrapper {
     display: flex;
     height: 100px; }
     header .fluid-container .row .inner-content-wrapper .logo-container img {
-      width: 220px; }
+      width: 150px; }
     header .fluid-container .row .inner-content-wrapper .navigation-container {
       display: flex;
       flex-direction: column;
@@ -285,7 +280,7 @@ header {
     margin: 0; }
     .short-description-container .fluid-container .row .short-description-title h2 {
       font-family: "Russo One", sans-serif;
-      font-size: 50px;
+      font-size: 40px;
       width: 100%;
       margin: auto; }
     .short-description-container .fluid-container .row .short-description-text p {
@@ -338,12 +333,10 @@ header {
     display: flex;
     height: 100px; }
     header .fluid-container .row .inner-content-wrapper .logo-container img {
-      width: 220px;
-      background-color: black; }
+      width: 150px; }
     header .fluid-container .row .inner-content-wrapper .navigation-container {
       position: relative;
-      height: auto;
-      background-color: white; }
+      height: auto; }
       header .fluid-container .row .inner-content-wrapper .navigation-container nav {
         display: flex;
         flex-direction: column;
@@ -362,7 +355,8 @@ header {
               margin-left: 25px;
               color: #2C3E50;
               font-family: "Russo One", sans-serif;
-              font-size: 1.5vw; }
+              font-size: 1.5vw;
+              color: white; }
   /*HERO SECTION*/
   .hero-container {
     background-image: url("../images/banner-background.jpg");
@@ -394,11 +388,11 @@ header {
       .short-description-container .fluid-container .row .short-description-title h2 {
         font-family: "Russo One", sans-serif;
         font-size: 70px;
-        width: 60%;
+        width: 100%;
         margin: auto; }
       .short-description-container .fluid-container .row .short-description-text p {
         font-family: "Sen", sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         width: 60%;
         margin: auto; }
   /*SERVICES SECTION*/

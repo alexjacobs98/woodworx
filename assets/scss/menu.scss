@@ -153,9 +153,6 @@ body {
 }
 
 .b-menu {
-  background: color(primary);
-  border: color(primary) solid $b-border-width;
-  border-radius: $b-border-radius;
   cursor: pointer;
   display: inline-block;
   height: $b-height;
@@ -168,13 +165,14 @@ body {
   z-index: 12;
 
   &:hover {
-    border: color(complement) solid $b-border-width;
+
   }
 }
 
 .b-bun {
-  background: color(complement);
+  background: white;
   position: relative;
+  color: white;
   transition: $b-transition;
 
   &--top {
@@ -223,11 +221,11 @@ body {
   &.open {
     position: static;
     .b-main {
-      border: color(complement) solid $b-border-width;
+
     }
 
     .b-bun--top {
-      background: color(complement);
+      background:white;
       top: 9px;
       transform: rotate(45deg);
     }
@@ -237,7 +235,7 @@ body {
     }
 
     .b-bun--bottom {
-      background: color(complement);
+      background: white;
       top: 5px;
       transform: rotate(-45deg);
     }

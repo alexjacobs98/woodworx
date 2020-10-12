@@ -40,6 +40,7 @@ html {
 
 header{
   overflow: hidden;
+  background-color: $BodyGrey;
   .fluid-container{
     .row{
       .inner-content-wrapper{
@@ -47,7 +48,7 @@ header{
         height: 100px;
         .logo-container{
           img{
-            width: 220px;
+            width: 150px;
           }
         }
         .navigation-container{
@@ -134,7 +135,7 @@ header{
         .short-description-title{
           h2{
             font-family: $StrongFont;
-            font-size: 50px;
+            font-size: 40px;
             width: 100%;
             margin: auto;
           }
@@ -220,14 +221,13 @@ header{
           height: 100px;
           .logo-container{
             img{
-              width: 220px;
-              background-color: black;
+              width: 150px;
+
             }
           }
           .navigation-container{
             position: relative;
             height: auto;
-            background-color: white;
             nav{
               display: flex;
               flex-direction: column;
@@ -247,6 +247,7 @@ header{
                     color: $BodyGrey;
                     font-family: $StrongFont;
                     font-size: 1.5vw;
+                    color: white;
                   }
                 }
               }
@@ -304,14 +305,14 @@ header{
           h2{
             font-family: $StrongFont;
             font-size: 70px;
-            width: 60%;
+            width: 100%;
             margin: auto;
           }
         }
         .short-description-text{
           p{
             font-family: $bodyFont;
-            font-size: 40px;
+            font-size: 30px;
             width: 60%;
             margin: auto;
           }
