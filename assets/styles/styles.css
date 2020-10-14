@@ -388,6 +388,108 @@ header {
       margin: 20px 100px;
       text-align: center; }
 
+.contact-us-section {
+  background-color: #2C3E50; }
+  .contact-us-section h2 {
+    width: 100%;
+    text-align: center;
+    font-family: "Russo One", sans-serif;
+    font-size: 40px;
+    color: white; }
+  .contact-us-section .fluid-container {
+    width: 90%;
+    margin: auto; }
+    .contact-us-section .fluid-container .row .form .contact-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      .contact-us-section .fluid-container .row .form .contact-form input {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 30px;
+        outline-style: none;
+        border-style: none;
+        font-family: "Russo One", sans-serif;
+        border-radius: 3px;
+        padding: 10px; }
+      .contact-us-section .fluid-container .row .form .contact-form textarea {
+        height: 300px;
+        width: 100%;
+        line-height: normal;
+        margin-bottom: 30px;
+        font-family: "Sen", sans-serif;
+        border-style: none;
+        border-radius: 3px;
+        padding: 10px; }
+      .contact-us-section .fluid-container .row .form .contact-form button {
+        width: 50%;
+        height: 50px;
+        font-family: "Russo One", sans-serif;
+        border-style: none;
+        border-radius: 3px;
+        background-color: #D35400;
+        color: white; }
+    .contact-us-section .fluid-container .row .profile {
+      margin-top: 75px; }
+      .contact-us-section .fluid-container .row .profile .profile-image {
+        height: 200px;
+        width: 200px;
+        background-color: white;
+        margin: auto;
+        border-radius: 100%; }
+      .contact-us-section .fluid-container .row .profile .contact-items {
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        margin: auto; }
+        .contact-us-section .fluid-container .row .profile .contact-items .profile-name {
+          text-align: center;
+          font-family: "Russo One", sans-serif;
+          color: white;
+          font-size: 25px;
+          padding: 10px 0; }
+        .contact-us-section .fluid-container .row .profile .contact-items .profile-email {
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center;
+          padding: 10px 0; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-email svg {
+            height: 40px; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-email .email-logo {
+            height: 50px;
+            overflow: hidden;
+            color: #D35400; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-email p {
+            height: 40px;
+            font-size: 20px;
+            line-height: 40px;
+            color: white;
+            font-family: "Russo One", sans-serif; }
+        .contact-us-section .fluid-container .row .profile .contact-items .profile-number {
+          padding: 10px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo {
+            margin: auto;
+            height: 50px;
+            width: 50px;
+            overflow: hidden; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo svg {
+              height: 40px;
+              color: #D35400; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-number p {
+            height: 40px;
+            font-size: 30px;
+            line-height: 40px;
+            color: white;
+            font-family: "Russo One", sans-serif; }
+
 @media (min-width: 992px) {
   .b-container {
     display: none; }
@@ -546,4 +648,101 @@ header {
       .registered-section .registered-inner .fluid-container .row img {
         margin: 0 10vw;
         height: 7vw;
-        margin: 0 10px; } }
+        margin: 0 10px; }
+  /*contact section*/
+  .contact-us-section {
+    background-color: #2C3E50; }
+    .contact-us-section h2 {
+      width: 100%;
+      text-align: center;
+      font-family: "Russo One", sans-serif;
+      font-size: 40px;
+      color: white; }
+    .contact-us-section .fluid-container {
+      width: 90%;
+      margin: auto; }
+      .contact-us-section .fluid-container .row .form .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
+        .contact-us-section .fluid-container .row .form .contact-form input {
+          height: 50px;
+          width: 100%;
+          margin-bottom: 30px;
+          outline-style: none;
+          border-style: none;
+          font-family: "Russo One", sans-serif;
+          border-radius: 3px;
+          padding: 10px; }
+        .contact-us-section .fluid-container .row .form .contact-form textarea {
+          height: 300px;
+          width: 100%;
+          line-height: normal;
+          margin-bottom: 30px;
+          font-family: "Sen", sans-serif;
+          border-style: none;
+          border-radius: 3px;
+          padding: 10px; }
+        .contact-us-section .fluid-container .row .form .contact-form button {
+          width: 50%;
+          height: 50px;
+          font-family: "Russo One", sans-serif;
+          border-style: none;
+          border-radius: 3px;
+          background-color: #D35400;
+          color: white; }
+      .contact-us-section .fluid-container .row .profile {
+        margin-top: 0; }
+        .contact-us-section .fluid-container .row .profile .profile-image {
+          height: 200px;
+          width: 200px;
+          background-color: white;
+          margin: auto;
+          border-radius: 100%; }
+        .contact-us-section .fluid-container .row .profile .contact-items {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 100%;
+          margin: auto; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-name {
+            text-align: center;
+            font-family: "Russo One", sans-serif;
+            color: white;
+            font-size: 25px; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-email {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-email svg {
+              height: 40px; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-email .email-logo {
+              height: 50px;
+              overflow: hidden;
+              color: #D35400; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-email p {
+              height: 40px;
+              font-size: 20px;
+              line-height: 40px;
+              color: white;
+              font-family: "Russo One", sans-serif; }
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-number {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo {
+              margin: auto;
+              height: 50px;
+              width: 50px;
+              overflow: hidden; }
+              .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo svg {
+                height: 40px;
+                color: #D35400; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-number p {
+              height: 40px;
+              font-size: 30px;
+              line-height: 40px;
+              color: white;
+              font-family: "Russo One", sans-serif; } }

@@ -2,7 +2,6 @@
 @import 'menu.scss';
 
 body{
-
 margin: auto;
 overflow: hidden;
 width: 100vw;
@@ -290,6 +289,136 @@ header{
   }
 }
 
+.contact-us-section{
+  background-color: $BodyGrey;
+  h2{
+    width: 100%;
+    text-align: center;
+    font-family: $StrongFont;
+    font-size: 40px;
+    color: white;
+  }
+  .fluid-container{
+    width: 90%;
+    margin: auto;
+    .row{
+      .form{
+        .contact-form{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          input{
+            height: 50px;
+            width: 100%;
+            margin-bottom: 30px;
+            outline-style: none;
+            border-style: none;
+            font-family: $StrongFont;
+            border-radius: 3px;
+            padding: 10px;
+
+          }
+          textarea{
+            height: 300px;
+            width: 100%;
+            line-height: normal;;
+            margin-bottom: 30px;
+            font-family: $bodyFont;
+            border-style: none;
+            border-radius: 3px;
+            padding: 10px;
+
+
+          }
+          button{
+            width: 50%;
+            height: 50px;
+            font-family: $StrongFont;
+            border-style: none;
+            border-radius: 3px;
+            background-color: $BodyOrange;
+            color: white;
+          }
+        }
+      }
+      .profile{
+        margin-top: 75px;
+        .profile-image{
+          height: 200px;
+          width: 200px;
+          background-color: white;
+          margin: auto;
+          border-radius: 100%;
+        }
+        .contact-items{
+          padding: 25px 0;
+          display: flex;
+          flex-direction: column;
+          justify-content:space-around;
+          width: 100%;
+          margin: auto;
+
+
+          .profile-name{
+            text-align:center;
+            font-family: $StrongFont;
+            color: white;
+            font-size: 25px;
+            padding: 10px 0;
+          }
+          .profile-email{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            padding: 10px 0;
+            svg{
+              height: 40px;
+            }
+            .email-logo{
+              height: 50px;
+              overflow: hidden;
+              color: $BodyOrange;
+            }
+            p{
+              height: 40px;
+              font-size: 20px;
+              line-height: 40px;
+              color: white;
+              font-family: $StrongFont;
+            }
+          }
+          .profile-number{
+            padding: 10px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            .number-logo{
+              margin: auto;
+              svg{
+                height: 40px;
+                color: $BodyOrange;
+              }
+              height: 50px;
+              width: 50px;
+              overflow: hidden;
+            }
+            p{
+              height: 40px;
+              font-size: 30px;
+              line-height: 40px;
+              color: white;
+              font-family: $StrongFont;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
 
@@ -530,6 +659,134 @@ header{
       }
     }
   }
+
+  /*contact section*/
+
+  .contact-us-section{
+    background-color: $BodyGrey;
+    h2{
+      width: 100%;
+      text-align: center;
+      font-family: $StrongFont;
+      font-size: 40px;
+      color: white;
+    }
+    .fluid-container{
+      width: 90%;
+      margin: auto;
+      .row{
+        .form{
+          .contact-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            input{
+              height: 50px;
+              width: 100%;
+              margin-bottom: 30px;
+              outline-style: none;
+              border-style: none;
+              font-family: $StrongFont;
+              border-radius: 3px;
+              padding: 10px;
+
+            }
+            textarea{
+              height: 300px;
+              width: 100%;
+              line-height: normal;;
+              margin-bottom: 30px;
+              font-family: $bodyFont;
+              border-style: none;
+              border-radius: 3px;
+              padding: 10px;
+
+
+            }
+            button{
+              width: 50%;
+              height: 50px;
+              font-family: $StrongFont;
+              border-style: none;
+              border-radius: 3px;
+              background-color: $BodyOrange;
+              color: white;
+            }
+          }
+        }
+        .profile{
+          margin-top: 0;
+          .profile-image{
+            height: 200px;
+            width: 200px;
+            background-color: white;
+            margin: auto;
+            border-radius: 100%;
+          }
+          .contact-items{
+            display: flex;
+            flex-direction: column;
+            justify-content:space-around;
+            width: 100%;
+            margin: auto;
+
+
+            .profile-name{
+              text-align:center;
+              font-family: $StrongFont;
+              color: white;
+              font-size: 25px;
+            }
+            .profile-email{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              text-align: center;
+              svg{
+                height: 40px;
+              }
+              .email-logo{
+                height: 50px;
+                overflow: hidden;
+                color: $BodyOrange;
+              }
+              p{
+                height: 40px;
+                font-size: 20px;
+                line-height: 40px;
+                color: white;
+                font-family: $StrongFont;
+              }
+            }
+            .profile-number{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              text-align: center;
+              .number-logo{
+                margin: auto;
+                svg{
+                  height: 40px;
+                  color: $BodyOrange;
+                }
+                height: 50px;
+                width: 50px;
+                overflow: hidden;
+              }
+              p{
+                height: 40px;
+                font-size: 30px;
+                line-height: 40px;
+                color: white;
+                font-family: $StrongFont;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 
 
 }
