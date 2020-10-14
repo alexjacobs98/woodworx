@@ -6,7 +6,7 @@ body{
 margin: auto;
 overflow: hidden;
 width: 100vw;
-background-image: url("../images/banner-background.jpg");
+  background-image: url('../images/about-us-image.jpg');
 background-attachment: fixed;
 background-position: center;
 background-size: cover;
@@ -140,7 +140,7 @@ header{
 
 .short-description-container{
   padding: 0;
-  background-color: $BodyGrey;
+  background-color: rgba(44, 62, 80,1.0);
     .fluid-container{
       padding: 0;
       margin: 0;
@@ -268,7 +268,7 @@ header{
   .registered-inner{
     .fluid-container{
       .row{
-        width: 60%;
+        width: 70%;
         margin: auto;
         display: flex;
         justify-content: center;

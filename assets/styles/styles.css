@@ -194,7 +194,7 @@ body {
   margin: auto;
   overflow: hidden;
   width: 100vw;
-  background-image: url("../images/banner-background.jpg");
+  background-image: url("../images/about-us-image.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
@@ -284,7 +284,7 @@ header {
 
 .short-description-container {
   padding: 0;
-  background-color: #2C3E50; }
+  background-color: #2c3e50; }
   .short-description-container .fluid-container {
     padding: 0;
     margin: 0; }
@@ -373,7 +373,7 @@ header {
 .registered-section {
   background-color: white; }
   .registered-section .registered-inner .fluid-container .row {
-    width: 60%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: center; }
