@@ -195,9 +195,11 @@ body {
   overflow: hidden;
   width: 100vw;
   background-image: url("../images/about-us-image.jpg");
-  background-attachment: fixed;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 0; }
+  body:after {
+    display: none; }
 
 /*VARIABLES*/
 html {
@@ -463,7 +465,7 @@ header {
             height: 50px;
             overflow: hidden;
             color: #D35400; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-email p {
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-email a {
             height: 40px;
             font-size: 20px;
             line-height: 40px;
@@ -483,7 +485,7 @@ header {
             .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo svg {
               height: 40px;
               color: #D35400; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-number p {
+          .contact-us-section .fluid-container .row .profile .contact-items .profile-number a {
             height: 40px;
             font-size: 30px;
             line-height: 40px;
@@ -700,6 +702,8 @@ header {
           margin: auto;
           border-radius: 100%; }
         .contact-us-section .fluid-container .row .profile .contact-items {
+          max-width: 70%;
+          margin: auto;
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -711,10 +715,7 @@ header {
             color: white;
             font-size: 25px; }
           .contact-us-section .fluid-container .row .profile .contact-items .profile-email {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            text-align: center; }
+            display: flex; }
             .contact-us-section .fluid-container .row .profile .contact-items .profile-email svg {
               height: 40px; }
             .contact-us-section .fluid-container .row .profile .contact-items .profile-email .email-logo {
@@ -728,19 +729,14 @@ header {
               color: white;
               font-family: "Russo One", sans-serif; }
           .contact-us-section .fluid-container .row .profile .contact-items .profile-number {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            text-align: center; }
+            display: flex; }
             .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo {
-              margin: auto;
-              height: 50px;
-              width: 50px;
-              overflow: hidden; }
+              margin: auto; }
               .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo svg {
                 height: 40px;
-                color: #D35400; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-number p {
+                color: #D35400;
+                margin-right: auto; }
+            .contact-us-section .fluid-container .row .profile .contact-items .profile-number a {
               height: 40px;
               font-size: 30px;
               line-height: 40px;

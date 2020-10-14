@@ -6,12 +6,20 @@
   var burgerContain = document.getElementsByClassName('b-container')[0];
   var burgerNav = document.getElementsByClassName('b-nav')[0];
 
+  burgerNav.addEventListener('click', function toggleClasses() {
+    [body, burgerContain, burgerNav].forEach(function (el) {
+      el.classList.toggle('open');
+    });
+  }, false);
+
   burgerMenu.addEventListener('click', function toggleClasses() {
     [body, burgerContain, burgerNav].forEach(function (el) {
       el.classList.toggle('open');
     });
   }, false);
 })();
+
+
 
 (function(){
 
