@@ -1,6 +1,18 @@
 @import 'reset.scss';
 @import 'menu.scss';
 
+body{
+
+margin: auto;
+overflow: hidden;
+width: 100vw;
+background-image: url("../images/banner-background.jpg");
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+
+
+}
 /*VARIABLES*/
 $BodyGrey:#2C3E50;
 $BodyOrange:#D35400;
@@ -128,22 +140,33 @@ header{
 
 .short-description-container{
   padding: 0;
+  background-color: $BodyGrey;
     .fluid-container{
       padding: 0;
       margin: 0;
       .row{
         .short-description-title{
+          display: flex;
+          padding: 0;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 0;
           h2{
             font-family: $StrongFont;
             font-size: 40px;
+            padding: 0;
             width: 100%;
-            margin: auto;
+            color: white;
+            text-align: center;
+            margin-bottom: 50px;
           }
         }
         .short-description-text{
           p{
+            text-align: center;
+            color: white;
             font-family: $bodyFont;
-            font-size: 30px;
+            font-size: 35px;
             width: 100%;
             margin: auto;
         }
@@ -157,11 +180,13 @@ header{
   margin: 0;
   max-width: 100% !important;
   overflow: hidden !important;
+  background-color: rgba(211, 84, 0,0.4);
   .services-title{
+
     h2{
       font-family: $StrongFont;
       font-size: 50px;
-      color: $BodyOrange;
+      color: white;
     }
   }
   .services{
@@ -200,6 +225,71 @@ header{
   }
 }
 
+.about-us-section{
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  .about-us-inner{
+      .fluid-container{
+        background-image: url("../images/about-us-image.jpg");
+        background-repeat: no-repeat;
+        width: 100%;
+        background-position: center;
+        margin: auto;
+        .row{
+          margin: auto;
+          .about-us-content{
+            padding: 100px 50px;
+            background-color: rgba(211, 84, 0,0.8);
+            box-shadow: -5px 0 5px -5px #333, 5px 0 5px -5px #333;
+            .title-container{
+              h2{
+                font-family: $StrongFont;
+                font-size: 40px;
+                color: white;
+              }
+            }
+            .about-us-text{
+              p{
+                font-family: $bodyFont;
+                font-size: 20px;
+                color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.registered-section{
+  background-color: white;
+  .registered-inner{
+    .fluid-container{
+      .row{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        h2{
+          width: 100%;
+          text-align: center;
+          font-family: $StrongFont;
+          font-size: 40px;
+          color: black;
+
+        }
+        img{
+          height: 100px;
+          margin: 20px 100px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px){
 
@@ -214,6 +304,7 @@ header{
 
   /* Header section*/
   header{
+    overflow: hidden;
     .fluid-container{
       .row{
         .inner-content-wrapper{
@@ -246,7 +337,7 @@ header{
                     margin-left: 25px;
                     color: $BodyGrey;
                     font-family: $StrongFont;
-                    font-size: 1.5vw;
+                    font-size: 1.2vw;
                     color: white;
                   }
                 }
@@ -296,24 +387,32 @@ header{
 
   /*50-50 SECTION*/
   .short-description-container{
+    overflow: hidden;
     padding: 0;
     .fluid-container{
       padding: 0;
       margin: 0;
       .row{
+        display: flex;
+        justify-content: space-around;
         .short-description-title{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
           h2{
             font-family: $StrongFont;
-            font-size: 70px;
-            width: 100%;
+            font-size: 60px;
             margin: auto;
+            margin-bottom: 0 !important;
           }
         }
         .short-description-text{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
           p{
             font-family: $bodyFont;
             font-size: 30px;
-            width: 60%;
             margin: auto;
           }
         }
@@ -331,7 +430,6 @@ header{
       h2{
         font-family: $StrongFont;
         font-size: 50px;
-        color: $BodyOrange;
       }
     }
     .services{
@@ -339,7 +437,7 @@ header{
         .row{
           justify-content: center;
           .service{
-            height: 400px;
+            height: 500px;
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -353,24 +451,85 @@ header{
             }
           }
           #service-1{
-            margin: 0 20px 20px 0;
             background-image: url('../images/flooring.jpg');
           }
           #service-2{
-            margin: 0 0px 20px 20px;
             background-image: url('../images/kitchen.jpg');
           }
           #service-3{
-            margin: 20px 20px 0 0;
             background-image: url('../images/loft.jpg');
           }
           #service-4{
-            margin: 20px 0 0 20px;
             background-image: url('../images/office.jpg');
           }
         }
       }
     }
   }
+
+  /*About us section*/
+  .about-us-section{
+    max-width: 100vw;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    .about-us-inner{
+        .fluid-container{
+          background-image: url("../images/about-us-image.jpg");
+          background-repeat: no-repeat;
+          width: 100%;
+          background-position: center;
+          margin: auto;
+          .row{
+            margin: auto;
+            .about-us-content{
+              padding: 200px 100px;
+              background-color: rgba(211, 84, 0,0.8);
+              box-shadow: -5px 0 5px -5px #333, 5px 0 5px -5px #333;
+              .title-container{
+                h2{
+                  font-family: $StrongFont;
+                  font-size: 40px;
+                  color: white;
+                }
+              }
+              .about-us-text{
+                p{
+                  font-family: $bodyFont;
+                  font-size: 20px;
+                  color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .registered-section{
+      background-color: rgba(236, 240, 241,0.6);
+    .registered-inner{
+      .fluid-container{
+        .row{
+          width: 60%;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          h2{
+            width: 100%;
+            text-align: center;
+            font-family: $StrongFont;
+            font-size: 40px;
+          }
+          img{
+            margin:0 10vw;
+            height: 7vw;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+
 
 }
