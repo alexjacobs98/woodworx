@@ -325,26 +325,53 @@ header {
   .services-wrapper .services .container-fluid .row {
     justify-content: center; }
     .services-wrapper .services .container-fluid .row .service {
+      padding: 15% 0;
       height: 300px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around; }
+      text-align: center; }
       .services-wrapper .services .container-fluid .row .service h3 {
         font-family: "Russo One", sans-serif;
         color: white;
-        font-size: 7vw;
-        text-align: center; }
+        font-size: 8vw;
+        text-align: center;
+        position: absolute;
+        margin: auto;
+        top: 35%;
+        margin-bottom: 15px;
+        width: 100%; }
+      .services-wrapper .services .container-fluid .row .service a {
+        background-color: #D35400;
+        font-size: 20px;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        color: white;
+        font-family: "Sen", sans-serif;
+        box-shadow: 4px 4px 5px black;
+        margin-top: 120px;
+        display: block;
+        border-radius: 80px; }
+        .services-wrapper .services .container-fluid .row .service a:hover {
+          text-decoration: none;
+          cursor: pointer; }
     .services-wrapper .services .container-fluid .row #service-1 {
       background-image: url("../images/flooring.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-1:hover a {
+        display: block; }
     .services-wrapper .services .container-fluid .row #service-2 {
       background-image: url("../images/kitchen.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-2:hover a {
+        display: block; }
     .services-wrapper .services .container-fluid .row #service-3 {
       background-image: url("../images/loft.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-3:hover a {
+        display: block; }
     .services-wrapper .services .container-fluid .row #service-4 {
       background-image: url("../images/office.jpg"); }
+      .services-wrapper .services .container-fluid .row #service-4:hover a {
+        display: block; }
 
 .about-us-section {
   max-width: 100vw;
@@ -432,65 +459,33 @@ header {
         background-color: #D35400;
         color: white; }
     .contact-us-section .fluid-container .row .profile {
-      margin-top: 75px; }
-      .contact-us-section .fluid-container .row .profile .profile-image {
-        height: 200px;
-        width: 200px;
-        background-color: white;
-        margin: auto;
-        border-radius: 100%; }
-      .contact-us-section .fluid-container .row .profile .contact-items {
-        padding: 25px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 75px 0; }
+      .contact-us-section .fluid-container .row .profile .contact-item {
+        padding: 20px;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        width: 100%;
-        margin: auto; }
-        .contact-us-section .fluid-container .row .profile .contact-items .profile-name {
-          text-align: center;
-          font-family: "Russo One", sans-serif;
-          color: white;
-          font-size: 25px;
-          padding: 10px 0; }
-        .contact-us-section .fluid-container .row .profile .contact-items .profile-email {
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          justify-content: space-around;
-          text-align: center;
-          padding: 10px 0; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-email svg {
-            height: 40px; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-email .email-logo {
-            height: 50px;
-            overflow: hidden;
-            color: #D35400; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-email a {
-            height: 40px;
-            font-size: 20px;
-            line-height: 40px;
-            color: white;
-            font-family: "Russo One", sans-serif; }
-        .contact-us-section .fluid-container .row .profile .contact-items .profile-number {
-          padding: 10px 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
+        align-content: center;
+        text-align: left; }
+        .contact-us-section .fluid-container .row .profile .contact-item .item-image {
           text-align: center; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo {
-            margin: auto;
+          .contact-us-section .fluid-container .row .profile .contact-item .item-image svg {
+            height: 60px;
+            color: #D35400; }
+        .contact-us-section .fluid-container .row .profile .contact-item .item-link {
+          text-align: center; }
+          .contact-us-section .fluid-container .row .profile .contact-item .item-link a {
+            line-height: 60px;
             height: 50px;
-            width: 50px;
-            overflow: hidden; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo svg {
-              height: 40px;
-              color: #D35400; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-number a {
-            height: 40px;
-            font-size: 30px;
-            line-height: 40px;
-            color: white;
-            font-family: "Russo One", sans-serif; }
+            font-family: "Sen", sans-serif;
+            font-size: 20px;
+            color: white; }
+            .contact-us-section .fluid-container .row .profile .contact-item .item-link a:hover {
+              text-decoration: none; }
 
 @media (min-width: 992px) {
   .b-container {
@@ -593,14 +588,28 @@ header {
         height: 500px;
         background-size: cover;
         background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around; }
+        padding: 150px 0; }
         .services-wrapper .services .container-fluid .row .service h3 {
           font-family: "Russo One", sans-serif;
           color: white;
           font-size: 3vw;
-          text-align: center; }
+          text-align: center;
+          top: 40%; }
+        .services-wrapper .services .container-fluid .row .service a {
+          background-color: #D35400;
+          font-size: 20px;
+          text-align: center;
+          width: 50%;
+          margin: auto;
+          color: white;
+          font-family: "Sen", sans-serif;
+          box-shadow: 4px 4px 5px black;
+          display: none;
+          margin-top: 140px;
+          animation-duration: 3ms; }
+          .services-wrapper .services .container-fluid .row .service a:hover {
+            text-decoration: none;
+            cursor: pointer; }
       .services-wrapper .services .container-fluid .row #service-1 {
         background-image: url("../images/flooring.jpg"); }
       .services-wrapper .services .container-fluid .row #service-2 {
@@ -694,51 +703,25 @@ header {
           background-color: #D35400;
           color: white; }
       .contact-us-section .fluid-container .row .profile {
-        margin-top: 0; }
-        .contact-us-section .fluid-container .row .profile .profile-image {
-          height: 200px;
-          width: 200px;
-          background-color: white;
-          margin: auto;
-          border-radius: 100%; }
-        .contact-us-section .fluid-container .row .profile .contact-items {
-          max-width: 70%;
-          margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 75px 0; }
+        .contact-us-section .fluid-container .row .profile .contact-item {
+          width: 75%;
           display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          width: 100%;
-          margin: auto; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-name {
-            text-align: center;
-            font-family: "Russo One", sans-serif;
-            color: white;
-            font-size: 25px; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-email {
-            display: flex; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-email svg {
-              height: 40px; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-email .email-logo {
-              height: 50px;
-              overflow: hidden;
-              color: #D35400; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-email p {
-              height: 40px;
-              font-size: 20px;
-              line-height: 40px;
-              color: white;
-              font-family: "Russo One", sans-serif; }
-          .contact-us-section .fluid-container .row .profile .contact-items .profile-number {
-            display: flex; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo {
-              margin: auto; }
-              .contact-us-section .fluid-container .row .profile .contact-items .profile-number .number-logo svg {
-                height: 40px;
-                color: #D35400;
-                margin-right: auto; }
-            .contact-us-section .fluid-container .row .profile .contact-items .profile-number a {
-              height: 40px;
-              font-size: 30px;
-              line-height: 40px;
-              color: white;
-              font-family: "Russo One", sans-serif; } }
+          flex-direction: row;
+          align-items: flex-start; }
+          .contact-us-section .fluid-container .row .profile .contact-item .item-image svg {
+            height: 60px;
+            color: #D35400; }
+          .contact-us-section .fluid-container .row .profile .contact-item .item-link a {
+            line-height: 60px;
+            height: 50px;
+            margin-left: 70px;
+            font-family: "Sen", sans-serif;
+            font-size: 25px;
+            color: white; }
+            .contact-us-section .fluid-container .row .profile .contact-item .item-link a:hover {
+              text-decoration: none; } }

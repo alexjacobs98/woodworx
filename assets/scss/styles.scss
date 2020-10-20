@@ -196,31 +196,65 @@ header{
       .row{
         justify-content: center;
         .service{
+          padding: 15% 0;
           height: 300px;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
+          text-align: center;
           h3{
             font-family: $StrongFont;
             color: white;
-            font-size: 7vw;
+            font-size: 8vw;
             text-align: center;
+            position:absolute;
+            margin: auto;
+            top: 35%;
+            margin-bottom: 15px ;
+            width: 100%;
+
+          }
+          a{
+            background-color: $BodyOrange;
+            font-size: 20px;
+            text-align: center;
+            width: 50%;
+            margin: 0 auto;
+            color: white;
+            font-family: $bodyFont;
+            box-shadow: 4px 4px 5px black;
+            margin-top: 120px;
+            display: block;
+            border-radius: 80px;
+            &:hover{
+              text-decoration: none;
+              cursor: pointer;
+            }
           }
         }
         #service-1{
           background-image: url('../images/flooring.jpg');
+          &:hover a{
+            display: block;
+          }
         }
         #service-2{
           background-image: url('../images/kitchen.jpg');
+          &:hover a{
+            display: block;
+          }
         }
         #service-3{
           background-image: url('../images/loft.jpg');
+          &:hover a{
+            display: block;
+          }
         }
         #service-4{
           background-image: url('../images/office.jpg');
+          &:hover a{
+            display: block;
+          }
         }
       }
     }
@@ -345,78 +379,40 @@ header{
         }
       }
       .profile{
-        margin-top: 75px;
-        .profile-image{
-          height: 200px;
-          width: 200px;
-          background-color: white;
-          margin: auto;
-          border-radius: 100%;
-        }
-        .contact-items{
-          padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding:  75px 0;
+        .contact-item{
+          padding: 20px;
+          width: 100%;
           display: flex;
           flex-direction: column;
-          justify-content:space-around;
-          width: 100%;
-          margin: auto;
-
-
-          .profile-name{
-            text-align:center;
-            font-family: $StrongFont;
-            color: white;
-            font-size: 25px;
-            padding: 10px 0;
-          }
-          .profile-email{
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            justify-content: space-around;
+          align-content: center;
+          text-align: left;
+          .item-image{
             text-align: center;
-            padding: 10px 0;
             svg{
-              height: 40px;
-            }
-            .email-logo{
-              height: 50px;
-              overflow: hidden;
-              color: $BodyOrange;
-            }
-            a{
-              height: 40px;
-              font-size: 20px;
-              line-height: 40px;
-              color: white;
-              font-family: $StrongFont;
+              height: 60px;
+              color: $BodyOrange
             }
           }
-          .profile-number{
-            padding: 10px 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+          .item-link{
             text-align: center;
-            .number-logo{
-              margin: auto;
-              svg{
-                height: 40px;
-                color: $BodyOrange;
-              }
-              height: 50px;
-              width: 50px;
-              overflow: hidden;
-            }
-            a{
-              height: 40px;
-              font-size: 30px;
-              line-height: 40px;
-              color: white;
-              font-family: $StrongFont;
-            }
+           a{
+             line-height: 60px;
+             height: 50px;
+             font-family: $bodyFont;
+             font-size: 20px;
+             color: white;
+             &:hover{
+               text-decoration: none;
+             }
+           }
           }
         }
+
       }
     }
   }
@@ -573,27 +569,55 @@ header{
             height: 500px;
             background-size: cover;
             background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            padding: 150px 0;
             h3{
               font-family: $StrongFont;
               color: white;
               font-size: 3vw;
               text-align: center;
+              top: 40%;
+            }
+            a{
+              background-color: $BodyOrange;
+              font-size: 20px;
+              text-align: center;
+              width: 50%;
+              margin: auto;
+              color: white;
+              font-family: $bodyFont;
+              box-shadow: 4px 4px 5px black;
+              display: none;
+              margin-top: 140px;
+              animation-duration: 3ms;
+              &:hover{
+                text-decoration: none;
+                cursor: pointer;
+              }
             }
           }
           #service-1{
             background-image: url('../images/flooring.jpg');
+            &:hover a{
+
+            }
           }
           #service-2{
             background-image: url('../images/kitchen.jpg');
+            &:hover a{
+
+            }
           }
           #service-3{
             background-image: url('../images/loft.jpg');
+            &:hover a{
+
+            }
           }
           #service-4{
             background-image: url('../images/office.jpg');
+            &:hover a{
+
+            }
           }
         }
       }
@@ -719,65 +743,34 @@ header{
           }
         }
         .profile{
-          margin-top: 0;
-          .profile-image{
-            height: 200px;
-            width: 200px;
-            background-color: white;
-            margin: auto;
-            border-radius: 100%;
-          }
-          .contact-items{
-            max-width: 70%;
-            margin: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          padding:  75px 0;
+          .contact-item{
+            width: 75%;
             display: flex;
-            flex-direction: column;
-            justify-content:space-around;
-            width: 100%;
-            margin: auto;
-
-
-            .profile-name{
-              text-align:center;
-              font-family: $StrongFont;
-              color: white;
-              font-size: 25px;
-            }
-            .profile-email{
-              display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            .item-image{
               svg{
-                height: 40px;
-              }
-              .email-logo{
-                height: 50px;
-                overflow: hidden;
-                color: $BodyOrange;
-              }
-              p{
-                height: 40px;
-                font-size: 20px;
-                line-height: 40px;
-                color: white;
-                font-family: $StrongFont;
+                height: 60px;
+                color: $BodyOrange
               }
             }
-            .profile-number{
-              display: flex;
-              .number-logo{
-                margin: auto;
-                svg{
-                  height: 40px;
-                  color: $BodyOrange;
-                  margin-right: auto;
-                }
-              }
-              a{
-                height: 40px;
-                font-size: 30px;
-                line-height: 40px;
-                color: white;
-                font-family: $StrongFont;
-              }
+            .item-link{
+             a{
+               line-height: 60px;
+               height: 50px;
+               margin-left: 70px;
+               font-family: $bodyFont;
+               font-size: 25px;
+               color: white;
+               &:hover{
+                 text-decoration: none;
+               }
+             }
             }
           }
         }
