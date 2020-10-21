@@ -1,5 +1,7 @@
 'use strict';
 
+
+
 (function() {
   var body = document.body;
   var burgerMenu = document.getElementsByClassName('b-menu')[0];
@@ -38,3 +40,8 @@
   };
 
 })();
+
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});

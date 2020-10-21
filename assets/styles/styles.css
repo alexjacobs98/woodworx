@@ -190,6 +190,27 @@ body.open:after {
     .b-container.open .b-brand {
       color: #444444; }
 
+.gallery-container {
+  min-height: 100vh; }
+  .gallery-container .gallery-heading h1 {
+    color: white;
+    font-family: "Russo One", sans-serif;
+    font-size: 9vw;
+    text-align: center; }
+  .gallery-container .container .row {
+    margin: 15px; }
+
+@media (min-width: 992px) {
+  .gallery-container {
+    min-height: 100vh; }
+    .gallery-container .gallery-heading h1 {
+      color: white;
+      font-family: "Russo One", sans-serif;
+      font-size: 5vw;
+      text-align: center; }
+    .gallery-container .container .row {
+      margin: 15px; } }
+
 body {
   margin: auto;
   overflow: hidden;
@@ -298,11 +319,11 @@ header {
       padding: 0; }
       .short-description-container .fluid-container .row .short-description-title h2 {
         font-family: "Russo One", sans-serif;
-        font-size: 40px;
+        font-size: 35px;
         padding: 0;
         width: 100%;
         color: white;
-        text-align: center;
+        text-align: center !important;
         margin-bottom: 50px; }
     .short-description-container .fluid-container .row .short-description-text p {
       text-align: center;
@@ -334,7 +355,7 @@ header {
       .services-wrapper .services .container-fluid .row .service h3 {
         font-family: "Russo One", sans-serif;
         color: white;
-        font-size: 8vw;
+        font-size: 7vw;
         text-align: center;
         position: absolute;
         margin: auto;
@@ -350,7 +371,7 @@ header {
         color: white;
         font-family: "Sen", sans-serif;
         box-shadow: 4px 4px 5px black;
-        margin-top: 120px;
+        margin-top: 100px;
         display: block;
         border-radius: 80px; }
         .services-wrapper .services .container-fluid .row .service a:hover {

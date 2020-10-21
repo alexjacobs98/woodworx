@@ -1,0 +1,40 @@
+$BodyGrey:#2C3E50;
+$BodyOrange:#D35400;
+$StrongFont: 'Russo One', sans-serif;
+$bodyFont:'Sen', sans-serif;
+
+.gallery-container{
+	min-height: 100vh;
+	.gallery-heading{
+		h1{
+			color: white;
+			font-family: $StrongFont;
+			font-size: 9vw;
+			text-align: center;
+		}
+	}
+	.container{
+		.row{
+			margin: 15px;
+		}
+	}
+}
+
+@media (min-width: 992px){
+	.gallery-container{
+		min-height: 100vh;
+		.gallery-heading{
+			h1{
+				color: white;
+				font-family: $StrongFont;
+				font-size: 5vw;
+				text-align: center;
+			}
+		}
+		.container{
+			.row{
+				margin: 15px;
+			}
+		}
+	}
+}
